@@ -81,3 +81,5 @@ with stream:
 
             recording = False
             v = []
+        # reduce cpu usage
+        sleep(0.05)
