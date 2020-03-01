@@ -45,7 +45,7 @@ def audio_callback(data, frames, time, status):
     channel_data = [channels[0] for channels in data]
     if not recording:
         recording = should_start_recording(channel_data)
-    if recording:
+    if recording and len(v) < recording_size:
         v.extend(data_buffer)
         data_buffer = []
         v.extend(channel_data)
