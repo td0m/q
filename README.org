@@ -8,48 +8,48 @@ It's 2020 already and the most common way to save and quit is still
 even ~ZZ~, but that already assumes you're in normal mode, and guess what,
 entering normal mode is already at least 1 character.
 
-**Worst best case, it's still a whopping ~3 keystrokes~ to quit Vim!**
+*Worst best case, it's still a whopping ~3 keystrokes~ to quit Vim!*
 
 * Q to the rescue
 Luckily, a group of highly skilled, exceptionally intelligent and particularly experienced engineers have designed
 and are working on implementation of a solution that will reduce such long and
 tedious tasks to exactly ~0 keystrokes~, without using a mouse.
 
-** How?
+* How?
 What's faster typing ~:wq~? Saying "~q~". What if you would like to quit without
 saving instead? Just shout ~q!~ instead.
 
 By using short sound classification with a fast deep neural network and
 real-time voice processing, you can even create your own vim bindings for action
-such as **clapping*, **slamming the keyboard*, or **aggressively shutting the door*.
+such as *clapping*, *slamming the keyboard*, or *aggressively shutting the door*.
 
 * Features
-- **always listening** - the FBI man is already listening to you, might as well.
-- **improves coding performance** - imagine the end of a coding interview, they
+- *always listening* - the FBI man is already listening to you, might as well.
+- *improves coding performance* - imagine the end of a coding interview, they
   ask you to close the file, your performance is about to get judged and instead
   of reaching for the keyboard and delaying the interview, you just shout
   "Que!". I can't imagine a situation where you wouldn't get the job, you saved
   company time and you're not even hired yet. Time = money, so you're techically
   saving their money.
-- **increases life expectancy** - it eats about 8% of my CPU when running in the
+- *increases life expectancy* - it eats about 8% of my CPU when running in the
   background, which also tends to consume the battery life. When you run out of
   battery, what do you do? Go for a walk, make some food, get some sleep, things
   that we should be doing to stay alive but often forget to because we get too
   hang up on programming. Anything is better tha sitting down 8hrs a day without
   a break, so take a break.
-- **makes you desirable** - by using Q, you're showing that you're devoted to
+- *makes you desirable* - by using Q, you're showing that you're devoted to
   your job, that you're competitive and passionate, performant, and
   creative. All of the above being extremely desirable by women (and men) these
   days. So technically, you could say Q is also a personal trainer, dating
   coach, self improvement guide and a dating app, all at once.
 
 * FAQ
-** Why isn't this project written in Rust?
+* Why isn't this project written in Rust?
 We're currently in the process of migrating our code base to Rust, thank you for
 your concern.
-** Is this a spybug?
+* Is this a spybug?
 The short answer is *no*. The long answer is complicated, so we won't get into that.
-** Is this satire?
+* Is this satire?
 Of course not.
 
 * [Boring] But wait, I don't use Vim! What now?
