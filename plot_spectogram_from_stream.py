@@ -9,13 +9,16 @@ import librosa.display
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
+import cv2
 
 # sampling rate of the device
 samplingrate = sd.query_devices("default", "input")["default_samplerate"]
 # max total size of the whole recording
-recording_size = int(samplingrate * 0.20)
+recording_len = 0.25
+buffer_len = 0.05
+recording_size = int(samplingrate * (recording_len - buffer_len))
 # size of buffer to save before reaching vol_threshold
-buffer_size = int(samplingrate * 0.05)
+buffer_size = int(samplingrate * buffer_len)
 
 # recording data, array of floats
 v = []
@@ -62,6 +65,9 @@ stream = sd.InputStream(
     device="default", channels=1, samplerate=samplingrate, callback=audio_callback
 )
 
+sound_name = input("name of sound (only use lowercase chars and underscore): ")
+
+
 with stream:
     print("listening...")
     while True:
@@ -75,9 +81,18 @@ with stream:
 
             # normalize data to make each value on a scale between -1 and 1
             normalized = librosa.util.normalize(mel_spec_db)
+            # between 0 and 255
+            normalized = [[(v + 1) * 255 / 2 for v in row] for row in normalized]
             # show preview
-            plt.imshow(normalized)
-            plt.show()
+            # plt.imshow(normalized)
+            # plt.show()
+            import os
+            import binascii
+
+            fname = binascii.hexlify(os.urandom(8))
+            f = f"./datasets/sounds-{int(recording_len*100)}ms/{sound_name}/{fname.decode('utf-8')}.jpg"
+            res = cv2.imwrite(f, np.array(normalized))
+            print(f"saved {f}")
 
             recording = False
             v = []
