@@ -10,7 +10,7 @@ entering normal mode is already at least 1 character.
 
 *Worst best case, it's still a whopping ~3 keystrokes~ to quit Vim!*
 
-* Q to the rescue
+* Q to the resQ
 Luckily, a group of highly skilled, exceptionally intelligent and particularly experienced engineers have designed
 and are working on implementation of a solution that will reduce such long and
 tedious tasks to exactly ~0 keystrokes~, without using a mouse.
